@@ -48,7 +48,7 @@ public class NetworkingManagerUnsplash implements NetworkingManager {
                         JSONObject imgObject = array.getJSONObject(i);
 
                         JsonElement mJson = parser.parse(imgObject.toString());
-                        PhotoItem photoItem = gson.fromJson(mJson, PhotoItemGiphy.class);
+                        PhotoItem photoItem = gson.fromJson(mJson, PhotoItemUnsplash.class);
                         photoItems.add(photoItem);
                     }
                 } catch (Exception ex) {
