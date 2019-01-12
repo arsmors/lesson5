@@ -15,8 +15,8 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-//        NetworkingManager networkingManager = new NetworkingManagerGiphy();
-        NetworkingManager networkingManager = new NetworkingManagerUnsplash();
+        NetworkingManager networkingManager = new NetworkingManagerGiphy();
+//        NetworkingManager networkingManager = new NetworkingManagerUnsplash();
 
         PhotoItemsPresenter presenter = new PhotoItemPresenterGridView();
 

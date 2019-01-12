@@ -1,8 +1,8 @@
-package com.example.den.lesson5.DataSources.Unsplash;
+package com.example.den.lesson5.DataSources.Giphy;
 
 import android.util.Log;
 
-import com.example.den.lesson5.DataSources.Giphy.PhotoItemGiphy;
+import com.example.den.lesson5.DataSources.Unsplash.PhotoItemUnsplash;
 import com.example.den.lesson5.Interfaces.NetworkingManager;
 import com.example.den.lesson5.Interfaces.NetworkingResultListener;
 import com.example.den.lesson5.Interfaces.PhotoItem;
@@ -11,7 +11,6 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
@@ -23,13 +22,13 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-public class NetworkingManagerUnsplash implements NetworkingManager {
+public class NetworkingManagerGiphy implements NetworkingManager {
 
     @Override
     public void getPhotoItems(NetworkingResultListener result) {
 
         Request request = new Request.Builder()
-                .url("https://api.unsplash.com/photos/?client_id=311ed690d7678d20b8ce556e56d5bf168d6ddf9fa1126e58193d95089d796542")
+                .url("https://api.giphy.com/v1/stickers/trending?api_key=VvyONhZ6eUFDFtuwg7w9tUYXzgefYdYy&limit=25&rating=G")
                 .build();
 
         final Gson gson = new Gson();
