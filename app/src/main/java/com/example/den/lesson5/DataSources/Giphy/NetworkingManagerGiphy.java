@@ -41,7 +41,9 @@ public class NetworkingManagerGiphy implements NetworkingManager {
             public void onResponse(Call call, final Response response) throws IOException {
                 try {
                     String jsonData = response.body().string();
-                    JSONArray array = new JSONArray(jsonData);
+                    JSONObject jsonObject = new JSONObject(jsonData);
+                    JSONArray array = jsonObject.getJSONArray("data");
+
 
                     for (int i = 0; i < array.length(); i++) {
                         JSONObject imgObject = array.getJSONObject(i);

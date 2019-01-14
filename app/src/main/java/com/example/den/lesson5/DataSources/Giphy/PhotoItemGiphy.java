@@ -24,12 +24,12 @@ public class PhotoItemGiphy implements PhotoItem {
 //        String display_name;
 //    }
 
-    Image downsized_medium;
+    Image images;
     User user;
 
 
     public String getImgUrl() {
-        return this.downsized_medium.url;
+        return this.images.downsized_medium.url;
     }
 
     public String getAuthorName() {
@@ -41,6 +41,10 @@ public class PhotoItemGiphy implements PhotoItem {
     }
 
     public class Image {
+        DownsizedMedium downsized_medium;
+    }
+
+    public class DownsizedMedium {
         String url;
     }
 }
